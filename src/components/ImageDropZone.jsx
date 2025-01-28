@@ -92,7 +92,7 @@ const ImageDropZone = ({ handleImageChange }) => {
         )}
       </div>
       <div className="flex items-center gap-1 pl-8 pt-2">
-        <img src="public/alert.png" alt="alert" className="w-[20px] " />
+        <img src="/alert.png" alt="alert" className="w-[20px] " />
         <p className="justify-start flex text-white/50 text-[12px]">
           Solo se aceptan imágenes PNG o JPG.
         </p>
