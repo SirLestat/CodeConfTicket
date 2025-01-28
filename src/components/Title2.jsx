@@ -7,7 +7,7 @@ const Title2 = ({ formData }) => {
           ‎ {formData.name}
         </strong>
         ‎ Tu boleto está listo.
-        <p className="text-[20px] font-extralight lg:text-[30px]">
+        <p className="text-[20px] font-extralight lg:text-[30px] lg:pt-20 pt-5 grid">
           Lo hemos enviado a: ‎
           <strong className="bg-gradient-to-r from-[#67cfff]  to-[#f0d] bg-clip-text text-transparent">
             {formData.email}
