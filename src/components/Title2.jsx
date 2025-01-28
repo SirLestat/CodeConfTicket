@@ -8,9 +8,9 @@ const Title2 = ({ formData }) => {
         </strong>
         ‎ Tu boleto está listo.
         <p className="text-[20px] font-extralight lg:text-[30px]">
-          Lo hemos enviado a:
+          Lo hemos enviado a:‎
           <strong className="bg-gradient-to-r from-[#67cfff]  to-[#f0d] bg-clip-text text-transparent">
-            {formData.email}
+            {formData.email}‎
           </strong>
           y te mantendremos actualizado conforme se acerque el evento.
         </p>
