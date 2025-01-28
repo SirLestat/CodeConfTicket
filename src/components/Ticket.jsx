@@ -16,13 +16,11 @@ const VerticalTicket = ({ formData }) => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            
             <path
               d="M20 5h360c8.284 0 15 6.716 15 15v160c0 8.284-6.716 15-15 15H20c-8.284 0-15-6.716-15-15V20c0-8.284 6.716-15 15-15z"
               fill="url(#gradient)"
             />
 
-            
             <path
               d="M100 0v200"
               stroke="#121212"
@@ -30,11 +28,9 @@ const VerticalTicket = ({ formData }) => {
               strokeDasharray="8 8"
             />
 
-            
             <circle cx="100" cy="0" r="15" fill="#121212" />
             <circle cx="100" cy="200" r="15" fill="#121212" />
 
-            
             <defs>
               <linearGradient
                 id="gradient"
@@ -50,16 +46,13 @@ const VerticalTicket = ({ formData }) => {
             </defs>
           </svg>
 
-          
           <div className="absolute inset-0 flex">
-            
             <div className="w-1/4 flex items-center justify-center">
               <div className="text-white font-bold text-xl transform rotate-90">
                 <p>#{ticketNumber}</p>
               </div>
             </div>
 
-            
             <div className="w-3/4 p-4 flex flex-col justify-between grid-rows-2 ">
               <div>
                 <div className="text-white font-bold text-2xl mb-2 flex justify-center items-center gap-2">
@@ -79,7 +72,14 @@ const VerticalTicket = ({ formData }) => {
 
                   <div className="justify-self-start text-white col-span-2 ">
                     <p>{formData.name}</p>
-                    <p>{formData.githubuser}</p>
+                    <p className="flex gap-1 items-center">
+                      <img
+                        src="/githubicon.png"
+                        alt="github icon"
+                        className="w-[20px] h-[20px]"
+                      />
+                      @{formData.githubuser}
+                    </p>
                   </div>
                 </div>
               </div>
