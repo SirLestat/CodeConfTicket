@@ -26,7 +26,7 @@ app.post("/send-email", async (req, res) => {
       html: `<h1>¡Gracias por registrarte!</h1><p>Adjunto encontrarás tu ticket para Coding Conf.</p>`,
     };
 
-    const email = await resend.emails.send(data); // Envía el correo 
+    const email = await resend.emails.send(data); // Envía el correo
 
     res.status(200).json({ message: "Correo enviado correctamente", email });
   } catch (error) {
@@ -38,3 +38,5 @@ app.post("/send-email", async (req, res) => {
 app.listen(port, () => {
   console.log(`Backend corriendo en http://localhost:${port}`);
 });
+
+export default app;
