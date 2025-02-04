@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ImageDropZone from "./ImageDropZone";
 import Title from "./Title";
 import axios from "axios";
-import Ticket2 from "./Ticket2";
+
 
 const Form = ({ formData, handleFormDataChange, handleImageChange }) => {
   const navigate = useNavigate();

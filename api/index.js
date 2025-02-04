@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ limit: "20mb", extended: true }));
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Endpoint para enviar el correo
-app.post("/send-email", async (req, res) => {
+app.post("/api/send-email", async (req, res) => {
   try {
     const { formData } = req.body;
 
@@ -40,4 +40,3 @@ app.listen(port, () => {
 });
 
 export default app;
- 
