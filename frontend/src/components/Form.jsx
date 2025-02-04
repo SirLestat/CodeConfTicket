@@ -2,6 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import ImageDropZone from "./ImageDropZone";
 import Title from "./Title";
+import axios from "axios";
 
 const Form = ({ formData, handleFormDataChange, handleImageChange }) => {
   const navigate = useNavigate();
@@ -12,6 +13,8 @@ const Form = ({ formData, handleFormDataChange, handleImageChange }) => {
       alert("Por favor selecciona una imagen");
       return;
     }
+
+    navigate("/ticket");
   };
 
   return (
