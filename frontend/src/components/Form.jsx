@@ -16,7 +16,7 @@ const Form = ({ formData, handleFormDataChange, handleImageChange }) => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/send-email", {
+      const response = await axios.post("/api/send-email", {
         formData,
         image: formData.image,
       });
