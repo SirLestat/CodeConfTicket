@@ -2,8 +2,6 @@
 import { useNavigate } from "react-router-dom";
 import ImageDropZone from "./ImageDropZone";
 import Title from "./Title";
-import axios from "axios";
-
 
 const Form = ({ formData, handleFormDataChange, handleImageChange }) => {
   const navigate = useNavigate();
@@ -13,21 +11,6 @@ const Form = ({ formData, handleFormDataChange, handleImageChange }) => {
     if (!formData.image) {
       alert("Por favor selecciona una imagen");
       return;
-    }
-
-    try {
-      const response = await axios.post("/api/send-email", {
-        formData,
-        image: formData.image,
-      });
-
-      if (response.status === 200) {
-        navigate("/ticket");
-      } else {
-        alert(response.data.error || "Hubo un error al enviar el correo");
-      }
-    } catch (error) {
-      alert("Error de conexion");
     }
   };
 
