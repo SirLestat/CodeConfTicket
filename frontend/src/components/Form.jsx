@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ImageDropZone from "./ImageDropZone";
 import Title from "./Title";
 import axios from "axios";
+import Ticket2 from "./Ticket2";
 
 const Form = ({ formData, handleFormDataChange, handleImageChange }) => {
   const navigate = useNavigate();
@@ -14,7 +15,20 @@ const Form = ({ formData, handleFormDataChange, handleImageChange }) => {
       return;
     }
 
-    navigate("/ticket");
+    try {
+      const response = await axios.post("http://localhost:5000/send-email", {
+        formData,
+        image: formData.image,
+      });
+
+      if (response.status === 200) {
+        navigate("/ticket");
+      } else {
+        alert(response.data.error || "Hubo un error al enviar el correo");
+      }
+    } catch (error) {
+      alert("Error de conexion");
+    }
   };
 
   return (
